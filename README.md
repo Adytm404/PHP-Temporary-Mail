@@ -12,7 +12,9 @@ Built using API from 1sec mail
 ```bash
   Download all file from 
   https://github.com/Adytm404/PHP-Temporary-Mail
-
+  
+```
+```bash
   Upload on your VPS or server.
   
 ```
