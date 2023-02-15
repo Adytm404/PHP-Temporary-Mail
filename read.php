@@ -8,7 +8,6 @@ $url = 'https://www.1secmail.com/api/v1/?action=readMessage&login='.$login.'&dom
 $json = file_get_contents($url);
 $data = json_decode($json);
 
-// membuat HTML dari data JSON
 $html = '<div>';
 $html .= '<p><strong>From:</strong> ' . $data->from . '</p>';
 $html .= '<p><strong>Subject:</strong> ' . $data->subject . '</p>';
@@ -27,9 +26,6 @@ $html .= '<hr>';
 $html .= '<p>' . nl2br($data->body) . '</p>';
 $html .= '</div>';
 
-// menampilkan HTML
 echo $html;
-
-
 
 ?>
