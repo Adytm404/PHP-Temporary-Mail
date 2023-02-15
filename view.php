@@ -42,6 +42,7 @@ if (isset($details['id']) && !empty($details['id'])) {
     $domain = $emailParts['domain'];
     $id = $details['id'];
 
+    echo '<title>📧Found Email!</title>';
     echo '<table align="center" border="1">';
     echo '  <tr>';
     echo '    <td><strong>From:</strong></td>';
@@ -60,7 +61,12 @@ if (isset($details['id']) && !empty($details['id'])) {
     echo "<td><a id='viewlink' value='./read.php?login=$username&domain=$domain&id=$id' href='./read.php?login=$username&domain=$domain&id=$id'><button style='display: none'>view</button></a><button onclick='loadData();'>Open Email</button></td><td><button onclick='location.reload();'>Refresh</button></td>";
     echo '  </tr>';
     echo '</table>';
+
+
+    echo '<script>audio.play();</script>';
   }else{
+    echo '<h4 align="center">Automatic refresh every 5 seconds
+    <h4>';
     echo '<meta http-equiv="Refresh" content="5">';
     echo '<table align="center" border="1">';
     echo '  <tr>';
@@ -80,10 +86,16 @@ if (isset($details['id']) && !empty($details['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Waiting email...</title>
 </head>
 <body>
+
+<audio id="myAudio">
+  <source src="./sound/notify.mp3" type="audio/mpeg">
+</audio>
+
 <script>
+  var audio = document.getElementById("myAudio");
   function loadData() {
     var xhr = new XMLHttpRequest();
     let element = document.querySelector("#viewlink");
