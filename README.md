@@ -22,4 +22,4 @@ Built using API from 1sec mail
 ## Demo
 
 
-https://tools.nyancorp.tech/mail/
+https://nyanhosting.id/tempmail/
